@@ -2,7 +2,6 @@ package br.com.stant.libraries.uilibrary.components.viewinguserdialog;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -12,7 +11,6 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import br.com.stant.libraries.uilibrary.R;
-import br.com.stant.libraries.uilibrary.databinding.ViewingUsersDialogItemBinding;
 import br.com.stant.libraries.uilibrary.databinding.ViewingUsersWorkedDaysDialogItemBinding;
 
 /**
@@ -25,10 +23,15 @@ public class ViewingUsersDialogAdapter extends
     private List<ViewingUserDto> mTeamMembers;
     private Context mContext;
     private ViewingUsersDialogViewContract mServiceInspectionFormFilledContract;
+    private Boolean mApproved;
 
     public void replaceData(List<ViewingUserDto> viewingUsersDto) {
         setList(viewingUsersDto);
         notifyDataSetChanged();
+    }
+
+    public void approved(Boolean approved){
+        this.mApproved = approved;
     }
 
     private void setList(List<ViewingUserDto> list) {
@@ -76,6 +79,27 @@ public class ViewingUsersDialogAdapter extends
                     .into(mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserPhotoCircularImageView);
                     //.into(mViewHolder.mViewingUsersDialogItemBinding.viewingUsersDialogItemUserPhotoCircularImageView);
         }
+
+        if(mApproved){
+            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setEnabled(false);
+            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
+        }
+
+        mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setOnClickListener(v -> {
+
+            teamMember.removeOneDay();
+
+            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays());
+        });
+
+        mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setOnClickListener(v -> {
+
+            teamMember.sumMoreOneDay();
+
+            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays());
+        });
+
+
 
     }
 

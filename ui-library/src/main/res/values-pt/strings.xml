@@ -12,7 +12,7 @@
     <string name="info_action_card_view.action_name_example">Desfazer</string>
 
 
-    <string name="viewing_users_dialog._title_text">Membros da Equipe</string>
+    <string name="viewing_users_dialog._title_text">Equipe</string>
     <string name="viewing_users_dialog.ok_hint">Ok</string>
 
     <string name="viewing_users_dialog._title_days_Worked_text">Dias trabalhados</string>

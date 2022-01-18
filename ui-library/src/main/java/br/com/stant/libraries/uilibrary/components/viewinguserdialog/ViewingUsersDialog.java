@@ -59,6 +59,11 @@ public class ViewingUsersDialog extends Dialog implements ViewingUsersDialogView
     }
 
     @Override
+    public void approved(Boolean approved) {
+        mViewingUsersDialogAdapter.approved(approved);
+    }
+
+    @Override
     public void show(){
         super.show();
     }

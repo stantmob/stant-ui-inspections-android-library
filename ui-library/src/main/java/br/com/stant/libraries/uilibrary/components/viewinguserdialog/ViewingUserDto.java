@@ -9,11 +9,13 @@ public class ViewingUserDto {
     private final String mUserName;
     private final String mUserPhoto;
     private final String mUserFunction;
+    private int mUserWorkedDays;
 
-    public ViewingUserDto(String userName, String userPhoto, String userFunction) {
+    public ViewingUserDto(String userName, String userPhoto, String userFunction, int mUserWorkedDays) {
         this.mUserName = userName;
         this.mUserPhoto = userPhoto;
         this.mUserFunction = userFunction;
+        this.mUserWorkedDays = mUserWorkedDays;
     }
 
     public String getUserName() {
@@ -34,4 +36,20 @@ public class ViewingUserDto {
 
         return false;
     }
+    public int getUserWorkedDays(){return mUserWorkedDays;}
+
+    public void sumMoreOneDay(){
+        if(mUserWorkedDays < 999){
+            mUserWorkedDays = mUserWorkedDays + 1;
+        }
+
+    }
+
+    public void removeOneDay(){
+        if(mUserWorkedDays >= 1){
+            mUserWorkedDays = mUserWorkedDays - 1;
+        }
+
+    }
+
 }
