@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg_light"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <br.com.stant.libraries.uilibrary.components.actionbuttonview.ActionButtonView
+            android:id="@+id/action_button_view_horizontal_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:actionIcon="@drawable/ic_ok_circle"
+            app:actionText="@string/action_button_view.text_button_horizontal_example"
+            app:cardStyle="horizontal" />
+
+        <br.com.stant.libraries.uilibrary.components.actionbuttonview.ActionButtonView
+            android:id="@+id/action_button_view_vertical_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:actionIcon="@drawable/ic_ok_circle"
+            app:actionText="@string/action_button_view.text_button_vertical_example"
+            app:cardStyle="vertical" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="br.com.stant.libraries.stantuiandroid.workspace.WorkspaceActivity" />
+
+        <variable
+            name="selectedPercent"
+            type="Float" />
+
+        <variable
+            name="executedPercent"
+            type="Float" />
+
+        <variable
+            name="test"
+            type="Float" />
+
+        <variable
+            name="buttonText"
+            type="String" />
+
+        <variable
+            name="buttonShape"
+            type="android.graphics.drawable.Drawable" />
+
+        <variable
+            name="buttonShadowShape"
+            type="android.graphics.drawable.Drawable" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg_light"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="WORKSPACE"
+            android:textSize="20sp" />
+
+        <br.com.stant.libraries.uilibrary.components.buttoncomponentview.ButtonComponentView
+            android:id="@+id/button_component"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            app:buttonShadowShape="@{buttonShadowShape}"
+            app:buttonShape="@{buttonShape}"
+            app:buttonText="@{buttonText}" />
+
+
+    </LinearLayout>
+</layout>

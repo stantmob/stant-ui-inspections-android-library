@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="br.com.stant.libraries.uilibrary.components.infoactioncardview.InfoActionCardView" />
+
+        <variable
+            name="infoText"
+            type="String" />
+
+        <variable
+            name="actionText"
+            type="String" />
+
+    </data>
+
+    <merge>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+
+            <TextView
+                android:id="@+id/info_action_card_view_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@{infoText}"
+                android:textColor="@color/gray"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:text="@string/info_action_card_view.title_example" />
+
+            <LinearLayout
+                android:id="@+id/info_action_card_action_container_linear_layout"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{handler::onClickActionCard}">
+
+                <TextView
+                    android:id="@+id/info_action_card_view_action_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@{actionText}"
+                    android:textAllCaps="true"
+                    android:textColor="@color/green_base"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    tools:text="@string/info_action_card_view.action_name_example" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </merge>
+
+</layout>

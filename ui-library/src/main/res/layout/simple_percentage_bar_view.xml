@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="executedPercentValue"
+            type="float" />
+
+        <variable
+            name="selectedPercentValue"
+            type="float" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/teste"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_rounded_grey"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        tools:layout_margin="10dp">
+
+        <LinearLayout
+            android:id="@+id/simple_percentage_bar_view_executed_linear_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="@{executedPercentValue}"
+            android:background="@drawable/shape_left_rounded_green_strength"
+            android:orientation="horizontal"
+            tools:layout_weight="15" />
+
+        <LinearLayout
+            android:id="@+id/simple_percentage_bar_view_selected_linear_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="@{selectedPercentValue}"
+            android:background="@drawable/shape_right_rounded_green_base"
+            android:orientation="horizontal"
+            tools:layout_weight="50" />
+
+    </LinearLayout>
+</layout>
