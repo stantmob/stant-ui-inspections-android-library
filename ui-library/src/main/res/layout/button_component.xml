@@ -32,7 +32,7 @@
             android:layout_marginTop="40dp"
             android:background="@{buttonShadowShape}"
             android:orientation="vertical"
-            tools:background="@drawable/shape_round_dark_blue"></LinearLayout>
+            tools:background="@drawable/shape_round_dark_blue"/>
 
         <LinearLayout
             android:id="@+id/button_shape"
