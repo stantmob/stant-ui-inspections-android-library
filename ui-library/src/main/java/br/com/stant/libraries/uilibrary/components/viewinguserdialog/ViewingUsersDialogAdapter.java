@@ -94,7 +94,7 @@ public class ViewingUsersDialogAdapter extends
 
                 teamMember.removeOneDay();
 
-                mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays());
+                mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
 
                 if(userWorkedDays == 999){
                     mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
@@ -108,7 +108,7 @@ public class ViewingUsersDialogAdapter extends
             public void onClick(View v) {
                 teamMember.sumMoreOneDay();
 
-                mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays());
+                mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
 
                 if(userWorkedDays == 0){
                     mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setEnabled(false);
