@@ -27,7 +27,7 @@
             android:layout_marginStart="8dp"
             android:text="Nome"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="15sp"
             app:layout_constraintStart_toEndOf="@+id/viewing_users_dialog_item_user_photo_circular_image_view"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -40,29 +40,16 @@
             android:layout_marginStart="8dp"
             android:text="Função"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:layout_constraintTop_toBottomOf="@id/viewing_users_dialog_item_user_name_text_view"
             app:layout_constraintStart_toEndOf="@+id/viewing_users_dialog_item_user_photo_circular_image_view"/>
-
-<!--        <TextView-->
-<!--            android:id="@+id/viewing_users_dialog_item_user_menos"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="-"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.62"-->
-<!--            app:layout_constraintStart_toEndOf="@+id/viewing_users_dialog_item_user_name_text_view"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
         <Button
             android:id="@+id/viewing_users_worked_days_dialog_item_button_less"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:text="-"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:background="@android:color/transparent"
             app:layout_constraintEnd_toStartOf="@+id/viewing_users_dialog_item_user_value"
             app:layout_constraintTop_toTopOf="parent"
@@ -77,7 +64,7 @@
             android:gravity="center"
             android:inputType="number"
             android:maxLength="3"
-            android:text="88"
+            android:text="888"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15sp"
@@ -90,25 +77,12 @@
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:text="+"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:background="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
             />
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/viewing_users_dialog_item_user_mais"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginEnd="15dp"-->
-<!--            android:text="+"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
     </android.support.constraint.ConstraintLayout>
 
