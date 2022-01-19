@@ -87,7 +87,7 @@ public class ViewingUsersDialogAdapter extends
 //            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
 //        }
 
-        int userWorkedDays = teamMember.getUserWorkedDays();
+
 
         mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setOnClickListener(new View.OnClickListener() {
             @Override

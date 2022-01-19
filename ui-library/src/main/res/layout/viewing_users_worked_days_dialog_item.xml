@@ -55,8 +55,6 @@
             android:textSize="25sp"
             android:background="@android:color/transparent"
             app:layout_constraintEnd_toStartOf="@+id/viewing_users_dialog_item_user_value"
-            android:clickable="true"
-            android:focusable="true"
             app:layout_constraintTop_toTopOf="parent"
 
             />
@@ -84,8 +82,6 @@
             android:text="+"
             android:textSize="25sp"
             android:background="@android:color/transparent"
-            android:clickable="true"
-            android:focusable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
