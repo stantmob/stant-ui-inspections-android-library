@@ -41,9 +41,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:queryHint="@string/viewing_users_dialog.search_for_members_hint"
-                app:tint="@color/white"
                 android:editTextColor="@color/white"
                 android:textColorHint="@color/white"
+                android:actionBarWidgetTheme="@color/white"
                 android:iconifiedByDefault="false"/>
 
             <View

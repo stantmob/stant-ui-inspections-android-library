@@ -4,6 +4,7 @@ import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.squareup.picasso.Picasso;
@@ -87,27 +88,36 @@ public class ViewingUsersDialogAdapter extends
 
         int userWorkedDays = teamMember.getUserWorkedDays();
 
-        mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setOnClickListener(v -> {
+        mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-            teamMember.removeOneDay();
+                teamMember.removeOneDay();
 
-            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays());
+                mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays());
 
-            if(userWorkedDays == 999){
-                mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
+                if(userWorkedDays == 999){
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
+                }
+
             }
         });
 
-        mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setOnClickListener(v -> {
+        mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                teamMember.sumMoreOneDay();
 
-            teamMember.sumMoreOneDay();
+                mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays());
 
-            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays());
-
-            if(userWorkedDays == 0){
-                mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setEnabled(false);
+                if(userWorkedDays == 0){
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setEnabled(false);
+                }
             }
         });
+
+
+
 
 
 
