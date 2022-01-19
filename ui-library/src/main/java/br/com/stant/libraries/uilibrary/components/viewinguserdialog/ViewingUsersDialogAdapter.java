@@ -25,6 +25,7 @@ public class ViewingUsersDialogAdapter extends
     private Context mContext;
     private ViewingUsersDialogViewContract mServiceInspectionFormFilledContract;
     private Boolean mApproved;
+    private ViewingUserDto teamMember2;
 
     public void replaceData(List<ViewingUserDto> viewingUsersDto) {
         setList(viewingUsersDto);
@@ -64,7 +65,7 @@ public class ViewingUsersDialogAdapter extends
 
         mViewHolder = holder;
 
-        ViewingUserDto teamMember = mTeamMembers.get(position);
+        final ViewingUserDto teamMember = mTeamMembers.get(position);
 
         //mViewHolder.mViewingUsersDialogItemBinding.viewingUsersDialogItemUserNameTextView.setText(teamMember.getUserName());
         mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserNameTextView.setText(teamMember.getUserName());
@@ -92,7 +93,7 @@ public class ViewingUsersDialogAdapter extends
             @Override
             public void onClick(View v) {
 
-                teamMember.removeOneDay();
+               teamMember.removeOneDay();
 
                 mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
 
