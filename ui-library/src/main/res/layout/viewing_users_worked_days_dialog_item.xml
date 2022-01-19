@@ -6,7 +6,8 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
 
         <com.github.siyamed.shapeimageview.CircularImageView
             android:id="@+id/viewing_users_dialog_item_user_photo_circular_image_view"
@@ -24,6 +25,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
             android:text="Nome"
             android:textColor="@color/black"
             android:textSize="13sp"
@@ -37,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="3dp"
+            android:layout_marginStart="8dp"
             android:text="Função"
             android:textColor="@color/black"
             android:textSize="12sp"
@@ -66,7 +69,7 @@
             android:gravity="center"
             android:inputType="number"
             android:maxLength="3"
-            android:text="888"
+            android:text="0"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15sp"

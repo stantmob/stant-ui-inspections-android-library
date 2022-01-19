@@ -81,10 +81,10 @@ public class ViewingUsersDialogAdapter extends
                     //.into(mViewHolder.mViewingUsersDialogItemBinding.viewingUsersDialogItemUserPhotoCircularImageView);
         }
 
-        if(mApproved){
-            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setEnabled(false);
-            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
-        }
+//        if(mApproved){
+//            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setEnabled(false);
+//            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
+//        }
 
         int userWorkedDays = teamMember.getUserWorkedDays();
 
@@ -96,9 +96,9 @@ public class ViewingUsersDialogAdapter extends
 
                 mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
 
-                if(userWorkedDays == 999){
-                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
-                }
+//                if(userWorkedDays == 999){
+//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
+//                }
 
             }
         });
@@ -110,9 +110,9 @@ public class ViewingUsersDialogAdapter extends
 
                 mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
 
-                if(userWorkedDays == 0){
-                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setEnabled(false);
-                }
+//                if(userWorkedDays == 0){
+//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setEnabled(false);
+//                }
             }
         });
 

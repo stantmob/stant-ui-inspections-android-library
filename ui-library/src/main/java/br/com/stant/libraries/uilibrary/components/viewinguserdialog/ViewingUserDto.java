@@ -9,7 +9,7 @@ public class ViewingUserDto {
     private final String mUserName;
     private final String mUserPhoto;
     private final String mUserFunction;
-    private int mUserWorkedDays;
+    private int mUserWorkedDays = 0;
 
     public ViewingUserDto(String userName, String userPhoto, String userFunction, int mUserWorkedDays) {
         this.mUserName = userName;
