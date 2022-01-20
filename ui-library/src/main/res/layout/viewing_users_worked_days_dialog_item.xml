@@ -9,9 +9,9 @@
             name="handler"
             type="android.view.View.OnClickListener"  />
 
-<!--        <variable-->
-<!--            name="handlerTeste"-->
-<!--            type="android.view.View.OnClickListener"  />-->
+        <variable
+            name="handlerTeste"
+            type="android.view.View.OnClickListener"  />
 
     </data>
 
@@ -65,6 +65,7 @@
             android:layout_height="wrap_content"
             android:text="-"
             android:textSize="25sp"
+            android:onClick="@{handler}"
             android:background="@android:color/transparent"
             app:layout_constraintEnd_toStartOf="@+id/viewing_users_dialog_item_user_value"
             app:layout_constraintTop_toTopOf="parent"
@@ -92,6 +93,7 @@
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:text="+"
+            android:onClick="@{handlerTeste}"
             android:textSize="25sp"
             android:background="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"

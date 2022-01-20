@@ -18,7 +18,7 @@ import br.com.stant.libraries.uilibrary.databinding.ViewingUsersWorkedDaysDialog
  * Created by Gabe on 25/09/2016.
  */
 public class ViewingUsersDialogAdapter extends
-        RecyclerView.Adapter<ViewingUsersDialogAdapter.ItemViewHolder>{
+        RecyclerView.Adapter<ViewingUsersDialogAdapter.ItemViewHolder> {
 
     private ItemViewHolder mViewHolder;
     private List<ViewingUserDto> mTeamMembers;
@@ -31,7 +31,7 @@ public class ViewingUsersDialogAdapter extends
         notifyDataSetChanged();
     }
 
-    public void approved(Boolean approved){
+    public void approved(Boolean approved) {
         this.mApproved = approved;
     }
 
@@ -39,9 +39,9 @@ public class ViewingUsersDialogAdapter extends
         mTeamMembers = list;
     }
 
-    public ViewingUsersDialogAdapter(Context context, List<ViewingUserDto> teamMembers, ViewingUsersDialogViewContract viewingUsersDialogViewContract){
-        this.mTeamMembers                         = teamMembers;
-        this.mContext                             = context;
+    public ViewingUsersDialogAdapter(Context context, List<ViewingUserDto> teamMembers, ViewingUsersDialogViewContract viewingUsersDialogViewContract) {
+        this.mTeamMembers = teamMembers;
+        this.mContext = context;
         this.mServiceInspectionFormFilledContract = viewingUsersDialogViewContract;
     }
 
@@ -55,7 +55,6 @@ public class ViewingUsersDialogAdapter extends
 
         ViewingUsersWorkedDaysDialogItemBinding viewingUsersWorkedDaysDialogItemBinding =
                 DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.viewing_users_worked_days_dialog_item, parent, false);
-
 
 
         return new ItemViewHolder(viewingUsersWorkedDaysDialogItemBinding);
@@ -73,7 +72,7 @@ public class ViewingUsersDialogAdapter extends
         mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserNameTextView.setText(teamMember.getUserName());
         //mViewHolder.mViewingUsersDialogItemBinding.viewingUsersDialogItemUserFunctionTextView.setText(teamMember.getUserFunction());
         mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserFunctionTextView.setText(teamMember.getUserFunction());
-        if(teamMember.hasUserPhoto()){
+        if (teamMember.hasUserPhoto()) {
             Picasso.with(mContext)
                     .load(teamMember.getUserPhoto())
                     .resize(180, 180)
@@ -81,15 +80,13 @@ public class ViewingUsersDialogAdapter extends
                     .placeholder(R.drawable.ic_user_holder)
                     .error(R.drawable.ic_user_holder)
                     .into(mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserPhotoCircularImageView);
-                    //.into(mViewHolder.mViewingUsersDialogItemBinding.viewingUsersDialogItemUserPhotoCircularImageView);
+            //.into(mViewHolder.mViewingUsersDialogItemBinding.viewingUsersDialogItemUserPhotoCircularImageView);
         }
 
 //        if(mApproved){
 //            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setEnabled(false);
 //            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
 //        }
-
-
 
 
     }
@@ -137,27 +134,25 @@ public class ViewingUsersDialogAdapter extends
 ////                }
 //            });
 //
-//            viewingUsersWorkedDaysDialogItemBinding.setHandler(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    teamMember.removeOneDay();
-//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
-//                }
-//            });
-//
-//            viewingUsersWorkedDaysDialogItemBinding.setHandlerTeste(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    teamMember.sumMoreOneDay();
-//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
-//                }
-//            });
-//
-//
-//        }
+            viewingUsersWorkedDaysDialogItemBinding.setHandler(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    teamMember.removeOneDay();
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                }
+            });
+
+            viewingUsersWorkedDaysDialogItemBinding.setHandlerTeste(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    teamMember.sumMoreOneDay();
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                }
+            });
 
 
         }
+
 
     }
     }
