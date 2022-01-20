@@ -1,10 +1,16 @@
 package br.com.stant.libraries.uilibrary.components.viewinguserdialog;
 
+import android.util.Log;
+import android.widget.Toast;
+
 /**
  * Created by denisvieira on 04/08/17.
  */
 
+
 public class ViewingUserDto {
+
+    private static String TAG =  "Clique";
 
     private final String mUserName;
     private final String mUserPhoto;
@@ -41,6 +47,7 @@ public class ViewingUserDto {
     public void sumMoreOneDay(){
         if(mUserWorkedDays < 999){
             mUserWorkedDays = mUserWorkedDays + 1;
+            Log.i(TAG, "removeOneDay:" + getUserName());
         }
 
 
@@ -49,6 +56,7 @@ public class ViewingUserDto {
     public void removeOneDay(){
         if(mUserWorkedDays >= 1){
             mUserWorkedDays = mUserWorkedDays - 1;
+            Log.i(TAG, "removeOneDay:" + getUserName());
         }
 
     }
