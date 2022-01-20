@@ -57,6 +57,8 @@ public class ViewingUsersDialogAdapter extends
         ViewingUsersWorkedDaysDialogItemBinding viewingUsersWorkedDaysDialogItemBinding =
                 DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.viewing_users_worked_days_dialog_item, parent, false);
 
+
+
         return new ItemViewHolder(viewingUsersWorkedDaysDialogItemBinding);
     }
 
@@ -98,7 +100,7 @@ public class ViewingUsersDialogAdapter extends
         return mTeamMembers.size();
     }
 
-    public class ItemViewHolder extends RecyclerView.ViewHolder{
+    public class ItemViewHolder extends RecyclerView.ViewHolder {
 
         //private ViewingUsersDialogItemBinding mViewingUsersDialogItemBinding;
         private ViewingUsersWorkedDaysDialogItemBinding viewingUsersWorkedDaysDialogItemBinding;
@@ -109,21 +111,22 @@ public class ViewingUsersDialogAdapter extends
 
             //this.mViewingUsersDialogItemBinding = mServiceInspectionFormFilledDetailTeamDialogItemBinding;
             this.viewingUsersWorkedDaysDialogItemBinding = mServiceInspectionFormFilledDetailTeamDialogItemBinding;
+
         }
 
         public void  vincula(ViewingUserDto teamMember){
 
-            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setOnClickListener(v -> {
-
-                teamMember.removeOneDay();
-
-                mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
-
-//                if(userWorkedDays == 999){
-//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
-//                }
-
-            });
+//            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setOnClickListener(v -> {
+//
+//                teamMember.removeOneDay();
+//
+//                mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+//
+////                if(userWorkedDays == 999){
+////                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setEnabled(false);
+////                }
+//
+//            });
 
             mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonMost.setOnClickListener(v -> {
                 teamMember.sumMoreOneDay();
@@ -135,8 +138,25 @@ public class ViewingUsersDialogAdapter extends
 //                }
             });
 
+            viewingUsersWorkedDaysDialogItemBinding.setHandler(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    teamMember.removeOneDay();
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                }
+            });
+
+            viewingUsersWorkedDaysDialogItemBinding.setHandlerTeste(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    teamMember.sumMoreOneDay();
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                }
+            });
+
 
         }
+
 
     }
 

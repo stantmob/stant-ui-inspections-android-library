@@ -43,6 +43,7 @@ public class ViewingUserDto {
             mUserWorkedDays = mUserWorkedDays + 1;
         }
 
+
     }
 
     public void removeOneDay(){
