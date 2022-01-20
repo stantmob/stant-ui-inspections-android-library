@@ -45,6 +45,7 @@
                 android:textColorHint="@color/white"
                 android:focusable="true"
                 android:showDividers="end"
+                android:textColor="@color/white"
                 android:iconifiedByDefault="false"/>
 
             <View
