@@ -138,7 +138,7 @@ public class ViewingUsersDialogAdapter extends
                 @Override
                 public void onClick(View v) {
                     teamMember.removeOneDay();
-                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                    //mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
                 }
             });
 
@@ -146,7 +146,7 @@ public class ViewingUsersDialogAdapter extends
                 @Override
                 public void onClick(View v) {
                     teamMember.sumMoreOneDay();
-                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                    //mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
                 }
             });
 
