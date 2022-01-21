@@ -67,7 +67,6 @@ public class ViewingUsersDialogAdapter extends
         mViewHolder = holder;
 
         final ViewingUserDto teamMember = mTeamMembers.get(position);
-        final ViewDataBinding vinculação = null;
         holder.vincula(teamMember, position);
 
         //mViewHolder.mViewingUsersDialogItemBinding.viewingUsersDialogItemUserNameTextView.setText(teamMember.getUserName());
@@ -143,7 +142,7 @@ public class ViewingUsersDialogAdapter extends
                 public void onClick(View v) {
                     teamMember.removeOneDay();
                     mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
-                    viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
                     notifyDataSetChanged();
                     notifyItemChanged(posicao);
 
@@ -155,15 +154,13 @@ public class ViewingUsersDialogAdapter extends
                 public void onClick(View v) {
                     teamMember.sumMoreOneDay();
                     mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
-                    viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
                     notifyDataSetChanged();
                     notifyItemChanged(posicao);
                 }
             });
 
-
         }
-
 
     }
     }
