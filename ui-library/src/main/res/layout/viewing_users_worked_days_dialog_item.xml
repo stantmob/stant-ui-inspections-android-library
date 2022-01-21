@@ -84,7 +84,6 @@
             android:gravity="center"
             android:inputType="number"
             android:maxLength="3"
-            android:text="@{Integer.toString(teamMember.userWorkedDays)}"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15sp"

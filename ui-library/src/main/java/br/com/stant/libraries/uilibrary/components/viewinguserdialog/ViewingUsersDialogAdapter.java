@@ -66,7 +66,7 @@ public class ViewingUsersDialogAdapter extends
         mViewHolder = holder;
 
         final ViewingUserDto teamMember = mTeamMembers.get(position);
-        holder.vincula(teamMember);
+        holder.vincula(teamMember, position);
 
         //mViewHolder.mViewingUsersDialogItemBinding.viewingUsersDialogItemUserNameTextView.setText(teamMember.getUserName());
         mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserNameTextView.setText(teamMember.getUserName());
@@ -110,7 +110,7 @@ public class ViewingUsersDialogAdapter extends
 
         }
 
-        public void vincula(ViewingUserDto teamMember) {
+        public void vincula(ViewingUserDto teamMember, int posicao) {
 
 //            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersWorkedDaysDialogItemButtonLess.setOnClickListener(v -> {
 //
@@ -138,7 +138,10 @@ public class ViewingUsersDialogAdapter extends
                 @Override
                 public void onClick(View v) {
                     teamMember.removeOneDay();
-                    //mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                    notifyDataSetChanged();
+                    ItemViewHolder.this.notify();
+                    notifyItemChanged(posicao);
                 }
             });
 
@@ -146,7 +149,10 @@ public class ViewingUsersDialogAdapter extends
                 @Override
                 public void onClick(View v) {
                     teamMember.sumMoreOneDay();
-                    //mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                    notifyDataSetChanged();
+                    ItemViewHolder.this.notify();
+                    notifyItemChanged(posicao);
                 }
             });
 

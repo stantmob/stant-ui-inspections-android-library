@@ -17,11 +17,11 @@ public class ViewingUserDto {
     private final String mUserFunction;
     private int mUserWorkedDays;
 
-    public ViewingUserDto(String userName, String userPhoto, String userFunction, int mUserWorkedDays) {
+    public ViewingUserDto(String userName, String userPhoto, String userFunction, int userWorkedDays) {
         this.mUserName = userName;
         this.mUserPhoto = userPhoto;
         this.mUserFunction = userFunction;
-        this.mUserWorkedDays = mUserWorkedDays;
+        this.mUserWorkedDays = userWorkedDays;
     }
 
     public String getUserName() {
