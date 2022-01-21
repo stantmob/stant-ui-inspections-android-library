@@ -69,6 +69,7 @@ public class ViewingUsersDialogAdapter extends
 
         final ViewingUserDto teamMember = mTeamMembers.get(position);
         holder.vincula(teamMember, position);
+        mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
 
         //mViewHolder.mViewingUsersDialogItemBinding.viewingUsersDialogItemUserNameTextView.setText(teamMember.getUserName());
         mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserNameTextView.setText(teamMember.getUserName());
@@ -154,7 +155,7 @@ public class ViewingUsersDialogAdapter extends
 
                 }
             });
-            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
+
 
             mViewHolder.viewingUsersWorkedDaysDialogItemBinding.setHandlerTeste(new View.OnClickListener() {
                 @Override
