@@ -138,17 +138,19 @@ public class ViewingUsersDialogAdapter extends
 ////                }
 //            });
 //
+
+
             viewingUsersWorkedDaysDialogItemBinding.setHandler(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    teamMember.removeOneDay();
-//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
-//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
-//                    notifyDataSetChanged();
-//                    notifyItemChanged(posicao);
+                    teamMember.removeOneDay();
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
+                    notifyDataSetChanged();
+                    notifyItemChanged(posicao);
 
-                    workedDays--;
-                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(String.valueOf(workedDays));
+//                    workedDays--;
+//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(String.valueOf(workedDays));
 
                 }
             });
@@ -156,14 +158,14 @@ public class ViewingUsersDialogAdapter extends
             viewingUsersWorkedDaysDialogItemBinding.setHandlerTeste(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    teamMember.sumMoreOneDay();
-//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
-//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
-//                    notifyDataSetChanged();
-//                    notifyItemChanged(posicao);
+                    teamMember.sumMoreOneDay();
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
+                    notifyDataSetChanged();
+                    notifyItemChanged(posicao);
 
-                    workedDays++;
-                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(String.valueOf(workedDays));
+//                    workedDays++;
+//                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(String.valueOf(workedDays));
                 }
             });
 
