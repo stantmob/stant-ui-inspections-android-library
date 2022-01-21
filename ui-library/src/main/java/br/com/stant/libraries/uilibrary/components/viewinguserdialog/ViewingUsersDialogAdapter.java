@@ -2,6 +2,7 @@ package br.com.stant.libraries.uilibrary.components.viewinguserdialog;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,6 +67,7 @@ public class ViewingUsersDialogAdapter extends
         mViewHolder = holder;
 
         final ViewingUserDto teamMember = mTeamMembers.get(position);
+        final ViewDataBinding vinculação = null;
         holder.vincula(teamMember, position);
 
         //mViewHolder.mViewingUsersDialogItemBinding.viewingUsersDialogItemUserNameTextView.setText(teamMember.getUserName());
@@ -98,12 +100,14 @@ public class ViewingUsersDialogAdapter extends
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
 
+
         //private ViewingUsersDialogItemBinding mViewingUsersDialogItemBinding;
         private ViewingUsersWorkedDaysDialogItemBinding viewingUsersWorkedDaysDialogItemBinding;
 
 
         public ItemViewHolder(ViewingUsersWorkedDaysDialogItemBinding mServiceInspectionFormFilledDetailTeamDialogItemBinding) {
             super(mServiceInspectionFormFilledDetailTeamDialogItemBinding.getRoot());
+
 
             //this.mViewingUsersDialogItemBinding = mServiceInspectionFormFilledDetailTeamDialogItemBinding;
             this.viewingUsersWorkedDaysDialogItemBinding = mServiceInspectionFormFilledDetailTeamDialogItemBinding;
@@ -139,8 +143,10 @@ public class ViewingUsersDialogAdapter extends
                 public void onClick(View v) {
                     teamMember.removeOneDay();
                     mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                    viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
                     notifyDataSetChanged();
                     notifyItemChanged(posicao);
+
                 }
             });
 
@@ -149,6 +155,7 @@ public class ViewingUsersDialogAdapter extends
                 public void onClick(View v) {
                     teamMember.sumMoreOneDay();
                     mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
+                    viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
                     notifyDataSetChanged();
                     notifyItemChanged(posicao);
                 }
