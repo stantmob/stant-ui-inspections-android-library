@@ -140,29 +140,30 @@ public class ViewingUsersDialogAdapter extends
 //
 
 
-            viewingUsersWorkedDaysDialogItemBinding.setHandler(new View.OnClickListener() {
+           mViewHolder.viewingUsersWorkedDaysDialogItemBinding.setHandler(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     teamMember.removeOneDay();
                     mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
-                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
-                    notifyDataSetChanged();
-                    notifyItemChanged(posicao);
+//
+//                    notifyDataSetChanged();
+//                    notifyItemChanged(posicao);
 
 //                    workedDays--;
 //                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(String.valueOf(workedDays));
 
                 }
             });
+            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
 
-            viewingUsersWorkedDaysDialogItemBinding.setHandlerTeste(new View.OnClickListener() {
+            mViewHolder.viewingUsersWorkedDaysDialogItemBinding.setHandlerTeste(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     teamMember.sumMoreOneDay();
                     mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
-                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
-                    notifyDataSetChanged();
-                    notifyItemChanged(posicao);
+                    //mViewHolder.viewingUsersWorkedDaysDialogItemBinding.executePendingBindings();
+//                    notifyDataSetChanged();
+//                    notifyItemChanged(posicao);
 
 //                    workedDays++;
 //                    mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(String.valueOf(workedDays));
