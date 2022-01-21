@@ -140,7 +140,6 @@ public class ViewingUsersDialogAdapter extends
                     teamMember.removeOneDay();
                     mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
                     notifyDataSetChanged();
-                    ItemViewHolder.this.notify();
                     notifyItemChanged(posicao);
                 }
             });
@@ -151,7 +150,6 @@ public class ViewingUsersDialogAdapter extends
                     teamMember.sumMoreOneDay();
                     mViewHolder.viewingUsersWorkedDaysDialogItemBinding.viewingUsersDialogItemUserValue.setText(teamMember.getUserWorkedDays() + "");
                     notifyDataSetChanged();
-                    ItemViewHolder.this.notify();
                     notifyItemChanged(posicao);
                 }
             });
