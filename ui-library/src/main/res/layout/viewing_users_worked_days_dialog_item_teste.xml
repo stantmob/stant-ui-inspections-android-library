@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/viewing_users_dialog_item_user_photo_circular_image_view"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_margin="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_user_holder"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/viewing_users_dialog_item_user_name_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:text="Nome"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/viewing_users_worked_days_dialog_item_button_less"
+        app:layout_constraintStart_toEndOf="@+id/viewing_users_dialog_item_user_photo_circular_image_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/viewing_users_dialog_item_user_function_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="8dp"
+        android:text="Função"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/viewing_users_worked_days_dialog_item_button_less"
+        app:layout_constraintStart_toEndOf="@+id/viewing_users_dialog_item_user_photo_circular_image_view"
+        app:layout_constraintTop_toBottomOf="@id/viewing_users_dialog_item_user_name_text_view" />
+
+    <Button
+        android:id="@+id/viewing_users_worked_days_dialog_item_button_less"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="25sp"
+        android:onClick="@{handler}"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/viewing_users_dialog_item_user_value"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/viewing_users_dialog_item_user_value"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="3"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/viewing_users_worked_days_dialog_item_button_most"
+        app:layout_constraintTop_toTopOf="@+id/viewing_users_worked_days_dialog_item_button_most"
+        app:layout_constraintBottom_toBottomOf="@+id/viewing_users_worked_days_dialog_item_button_most"/>
+
+    <Button
+        android:id="@+id/viewing_users_worked_days_dialog_item_button_most"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:onClick="@{handlerTeste}"
+        android:textSize="25sp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+</android.support.constraint.ConstraintLayout>

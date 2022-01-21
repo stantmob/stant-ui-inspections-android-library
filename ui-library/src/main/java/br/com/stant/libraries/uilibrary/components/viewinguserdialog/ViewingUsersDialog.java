@@ -27,7 +27,8 @@ import br.com.stant.libraries.uilibrary.databinding.ViewingUsersDialogBinding;
 public class ViewingUsersDialog extends Dialog implements ViewingUsersDialogViewContract{
 
     private ViewingUsersDialogBinding mViewingUsersDialogBinding;
-    private ViewingUsersDialogAdapter mViewingUsersDialogAdapter;
+    //private ViewingUsersDialogAdapter mViewingUsersDialogAdapter;
+    private ViewingUsersDialogAdapterTeste mViewingUsersDialogAdapter;
     private List<ViewingUserDto> viewingUsersDto;
 
     public ViewingUsersDialog(@NonNull Context context) {
@@ -69,7 +70,7 @@ public class ViewingUsersDialog extends Dialog implements ViewingUsersDialogView
     }
 
     private void configureViewingUsersAdapter(){
-        mViewingUsersDialogAdapter = new ViewingUsersDialogAdapter(getContext(), new ArrayList<ViewingUserDto>(0), this);
+        mViewingUsersDialogAdapter = new ViewingUsersDialogAdapterTeste(getContext(), new ArrayList<ViewingUserDto>(0), this);
         RecyclerView.LayoutManager layout = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 
         mViewingUsersDialogBinding.viewingUsersDialogRecycler.setLayoutManager(layout);
