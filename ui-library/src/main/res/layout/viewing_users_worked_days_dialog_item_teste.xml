@@ -69,12 +69,12 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/viewing_users_worked_days_dialog_item_button_most"
-        app:layout_constraintTop_toTopOf="@+id/viewing_users_worked_days_dialog_item_button_most"
-        app:layout_constraintBottom_toBottomOf="@+id/viewing_users_worked_days_dialog_item_button_most"/>
+        app:layout_constraintEnd_toStartOf="@+id/viewing_users_worked_days_dialog_item_button_More"
+        app:layout_constraintTop_toTopOf="@+id/viewing_users_worked_days_dialog_item_button_More"
+        app:layout_constraintBottom_toBottomOf="@+id/viewing_users_worked_days_dialog_item_button_More"/>
 
     <Button
-        android:id="@+id/viewing_users_worked_days_dialog_item_button_most"
+        android:id="@+id/viewing_users_worked_days_dialog_item_button_More"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:text="+"
