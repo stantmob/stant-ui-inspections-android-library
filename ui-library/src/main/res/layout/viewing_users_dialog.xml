@@ -43,7 +43,6 @@
                 android:queryHint="@string/viewing_users_dialog.search_for_members_hint"
                 android:editTextColor="@color/white"
                 android:theme="@style/searchView"
-                android:searchIcon="@drawable/ic_action_search"
                 android:focusable="true"
                 android:showDividers="end"
                 android:textColor="@color/white"
