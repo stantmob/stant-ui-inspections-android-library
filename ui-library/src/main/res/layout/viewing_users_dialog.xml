@@ -18,6 +18,7 @@
         android:minWidth="300dp"
         android:orientation="vertical">
 
+
         <ImageView
             android:id="@+id/viewing_users_dialog_close_members_dialog_image_view"
             android:layout_width="wrap_content"
@@ -41,6 +42,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:queryHint="@string/viewing_users_dialog.search_for_members_hint"
+                android:editTextColor="@color/white"
+                android:focusable="true"
+                android:showDividers="end"
+                android:textColor="@color/white"
+                android:theme="@style/searchView"
                 android:iconifiedByDefault="false"/>
 
             <View

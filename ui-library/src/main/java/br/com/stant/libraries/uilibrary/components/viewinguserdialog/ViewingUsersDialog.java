@@ -37,7 +37,7 @@ public class ViewingUsersDialog extends Dialog implements ViewingUsersDialogView
 
     private void init(){
         mViewingUsersDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(getContext()),
-                        R.layout.viewing_users_dialog, null, false);
+                R.layout.viewing_users_dialog, null, false);
 
         this.setContentView(mViewingUsersDialogBinding.getRoot());
         this.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -56,6 +56,11 @@ public class ViewingUsersDialog extends Dialog implements ViewingUsersDialogView
     @Override
     public void closeDialog(View view) {
         this.dismiss();
+    }
+
+    @Override
+    public void approved(Boolean approved) {
+        mViewingUsersDialogAdapter.approved(approved);
     }
 
     @Override

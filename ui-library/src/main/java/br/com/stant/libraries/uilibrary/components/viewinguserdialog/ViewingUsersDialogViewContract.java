@@ -11,4 +11,5 @@ import java.util.List;
 public interface ViewingUsersDialogViewContract {
     void setViewingUsers(List<ViewingUserDto> viewingUsers);
     void closeDialog(View view);
+    void approved(Boolean approved);
 }
