@@ -59,6 +59,7 @@
             android:background="@drawable/shape_rounded_white"
             android:orientation="vertical">
 
+
             <LinearLayout
                 android:id="@+id/viewing_users_dialog_text_horizontal"
                 android:layout_width="match_parent"
